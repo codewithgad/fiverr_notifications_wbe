@@ -30,9 +30,7 @@ Click the popup icon to manually stop or test the sound.
 - Modify the refresh interval in the background.js file:
 
 ```javascript
-const REFRESH_INTERVAL = 30000; // 30 seconds
-
-// (Change 30000 to your preferred interval in milliseconds.)
+chrome.alarms.create("refreshPage", { periodInMinutes: 3 }); // 3 mins
 ```
 
 - Change the notification sound by replacing the alert.mp3 file in the /sounds folder.
