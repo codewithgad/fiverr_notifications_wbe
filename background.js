@@ -1,19 +1,19 @@
 // automatic page refresh
 
-chrome.alarms.create("refreshPage", { periodInMinutes: 3 });
+// chrome.alarms.create("refreshPage", { periodInMinutes: 3 });
 
-chrome.alarms.onAlarm.addListener((alarm) => {
-  if (alarm.name === "refreshPage") {
-    chrome.tabs.query({ url: "https://www.fiverr.com/*" }, (tabs) => {
-      tabs.forEach((tab) => {
-        chrome.scripting.executeScript({
-          target: { tabId: tab.id },
-          function: () => location.reload()
-        });
-      });
-    });
-  }
-});
+// chrome.alarms.onAlarm.addListener((alarm) => {
+//   if (alarm.name === "refreshPage") {
+//     chrome.tabs.query({ url: "https://www.fiverr.com/*" }, (tabs) => {
+//       tabs.forEach((tab) => {
+//         chrome.scripting.executeScript({
+//           target: { tabId: tab.id },
+//           function: () => location.reload()
+//         });
+//       });
+//     });
+//   }
+// });
 
 // Check for new message notifications
 
